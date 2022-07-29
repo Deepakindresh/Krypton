@@ -21,6 +21,7 @@ function HomeProduct({product}) {
   }
 
   function handleBasket(){
+    //  Add to basket if it is not already added using Context API
     for(let i = 0; i < addedtocart.length; i++){
       if (addedtocart[i].id === product.id){
         return;
@@ -34,6 +35,7 @@ function HomeProduct({product}) {
   }
 
   function handleFav(){
+    // Favourite products of users are sent to the server for future use.
     axios.post('http://localhost:5000/favourites', {
       product: product
     }).then((response) => {

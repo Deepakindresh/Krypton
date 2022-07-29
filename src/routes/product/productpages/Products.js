@@ -5,6 +5,8 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import {useNavigate} from 'react-router-dom';
 import Navbar from '../../../components/navbar/Navbar';
 
+
+//Product page where a specific product is displayed
 function Products() {
   let navigate = useNavigate();
   const [{currProduct,user}, dispatch] = useStateValue();

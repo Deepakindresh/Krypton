@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import {useStateValue} from '../../StateProvider';
 
+// Navbar component with links to multiple pages
 
 function Navbar() {
     const [{user,basket}, dispatch] = useStateValue();
@@ -30,6 +31,7 @@ function Navbar() {
             <Link to='/cart' className='Link'>
                 <div className='Links'>
                     <ShoppingCartIcon />
+                    {/* Code for showing the change in basket length */}
                     <div style={{backgroundColor:'red', borderRadius: '20px', padding: '5px'}}>{basket.length}</div>
                 </div>
             </Link>

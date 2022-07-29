@@ -17,13 +17,17 @@ function Login() {
     let navigate = useNavigate();
 
     const baseURL = "http://localhost:5000/";
+
+    // Creating an account
     useEffect(() => {
+      //Checking if button pressed
       if (createAcct){
         axios.get(baseURL).then((response) => {
           let accounts = response.data;
           let accountExist = false;
           for(let i = 0; i < accounts.length; i++){
             if(accounts[i].email === email){
+              //Checking if account already exists
               accountExist = true;
           }
         }
@@ -32,6 +36,7 @@ function Login() {
           setCreateAcct(false);
         }
         else{
+          //Creating account
           axios.post(baseURL+'users', {
             email: email,
             password: password
@@ -53,10 +58,12 @@ function Login() {
     , [createAcct]);
 
     function handleLogin() {
+      //Checking if account exists and logging in using post method since we cant read encrypted password
       axios.post(baseURL + 'login', {
         email: email,
         password: password}).then((response) => {
           setIsLoggedIn(true);
+          // if response is 200 Status OK then set user to the user that is logged in
           alert("Login successful");
           dispatch({
             type: "SET_USER",

@@ -7,6 +7,7 @@ import axios from 'axios';
 import {useState, useEffect} from 'react';
 import HomeProduct from './HomeProduct';
 
+// Page where all the products are rendered and user does not need to be signed in to view this page
 
 function App() {
 

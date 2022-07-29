@@ -6,6 +6,8 @@ import CloseIcon from '@mui/icons-material/Close';
 import zIndex from '@mui/material/styles/zIndex';
 import axios from 'axios';
 
+
+//Cart page allowed only if user logged in
 function Cart() {
   const [{basket, user}, dispatch] = useStateValue();
   const [toDelete, setToDelete] = useState(null);
@@ -20,7 +22,7 @@ function Cart() {
     });
   }, [toDelete]);
 
-
+  //Logic for calculating the total amount
   useEffect(() => {
     let total = 0;
     basket.map((item) => {
