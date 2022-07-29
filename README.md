@@ -2,36 +2,17 @@
 
 ## Overview
 
-To complete this assessment, you will need to use this [Ecommerce-boilerplate](https://github.com/gurukishore111/Ecommerce-boilerplate) web app.
+Built an E-commerce app using ReactJS with the latest version of react-router-dom and using the json server for backend db
 
-The purpose of this assessment is to assess your **skills and approach to composing a simple web app** given an API feed.
+## Pages and Features
 
-## What to do?
+- Login page (Checks for already existing accounts and logs in with utmost security)
+- Home page (All products available with features of adding to favourite list and directly adding to cart or analyzing a specific product)
+- Product page (Used for analyzing the product and has links to orders page)
+- Cart Page (Alligns all the products and calculates total bill and sends data to server/db)
 
-Your goal is to implement an eCommerce application. The CSS framework/library is totally up to you.
 
-Although it's a very basic exercise, we will be looking for simple, well-designed, well-commented, and tested code in the submission.
 
-Please include a `README` with setup instructions and any other documentation you created as part of your solution.
-
-Also, add very short info for the following to your `README`:
-
-- Describe all the application functionalities
-- Are there any improvements you could make to your submission?
-- What would you do differently if you were allocated more time?
-
-Once you complete implementation, please add the link to the hosted repository (e.g. Github). Alternatively, you may submit your code as a ZIP file too.
-
-(NOTE: You have to use the latest version of v18 and react-router-dom v6)
-
-## How should the application work?
-
-The user of this react application should be able to view all the products. The application should have the following workflow,
-
-1. Create the login/register functionality.
-2. Once the user is authenticated
-3. Users can add the products to the cart page
-4. Also user can add their favourite products
 
 ## Development Setup
 
@@ -39,28 +20,54 @@ The user of this react application should be able to view all the products. The 
 - `npm install` - To install the dependencies
 - `npm run server` - To start the JSON server
 - `npm start` - To start the react app
+- Might be needed to install some additional packages such as material ui icons, axios and json server
 
-## This project's user interface should like this.
+
+## How the application works?
+
+The user of this react application should be able to view all the products. The application should have the following workflow,
+
+1. Initially you would have to create an account and then login (this might take sometime and you might have to click the login button twice.)
+2. Once the user is authenticated you can visit the home page where multiple products are visible and you can choose to favourite them or add them to your cart or go in a bit deeper by clicking the product and checking it out.
+3. In the products page you can also favourite them, go back to home page or even go to the cart page by clicking buy now.
+4. In the carts page you can choose to delete items from your cart if needed and place order and this will get updated in the server.
+5. If logged out you wont be able to access the important pages but you can look at products.
+
+## Implementation/ Outputs
 
 ### Login/Register page
 
-<img width="1512" alt="Screenshot 2022-07-24 at 10 44 13 AM" src="https://user-images.githubusercontent.com/52570524/180701451-5ccce009-0384-426c-b1bc-d7536fd7b142.png">
+<img width="1512" src="https://cdn.discordapp.com/attachments/928547119646781500/1002700971383726200/unknown.png">
 
 ### Home page
 
-<img width="1512" alt="Screenshot 2022-07-24 at 10 45 58 AM" src="https://user-images.githubusercontent.com/52570524/180701523-b679c753-68ff-47f1-9a1b-f4cc04d88fea.png">
+<img width="1512"  src="https://cdn.discordapp.com/attachments/928547119646781500/1002701545504256130/unknown.png">
 
 ### Product detail page
 
-<img width="675" alt="Screenshot 2022-07-24 at 10 53 17 AM" src="https://user-images.githubusercontent.com/52570524/180701655-7c3d3120-ff81-445a-81d9-b2152db8a776.png">
+<img width="675"  src="https://cdn.discordapp.com/attachments/928547119646781500/1002701876422262945/unknown.png">
 
 ### Cart page
 
-<img width="1415" alt="Screenshot 2022-07-24 at 10 50 18 AM" src="https://user-images.githubusercontent.com/52570524/180701661-a587033d-4616-40f8-9260-dfd3e8b97152.png">
+<img width="1415" src="https://cdn.discordapp.com/attachments/928547119646781500/1002702349267116115/unknown.png">
 
-<img width="1472" alt="Screenshot 2022-07-24 at 10 51 16 AM" src="https://user-images.githubusercontent.com/52570524/180701674-31c7e11c-56b3-4f24-83c4-e9d582c4b3f8.png">
+<img width="1472" src="https://cdn.discordapp.com/attachments/928547119646781500/1002702725378740234/unknown.png">
 
-## API Usage
+## API Usage and Implementation
+
+<img width="1415" src="https://cdn.discordapp.com/attachments/928547119646781500/1002703015863660554/unknown.png">
+
+<img width="1472" src="https://cdn.discordapp.com/attachments/928547119646781500/1002703293014872184/unknown.png">
+
+
+## Future Scope (if had more time)
+
+- Add footers, licensing, host with domains, add even more security.
+- Features like searching and sorting products, adding chatbots, carousels for ads.
+- Create cookies, collect user data with consent for further analysis.
+- Recommendation systems to recommend products based on user interests.
+- Leverage Cloud resources to improve speed and efficiency
+
 
 API can be launched using npm run server.
 | Endpoint | Result |
@@ -71,11 +78,5 @@ API can be launched using npm run server.
 | /favourites | Lists all available favourites
 
 More info about API usage can be found at the [Postman Collection](https://www.getpostman.com/collections/9f28d57ae334429e1f1f)
-
-## Bonus
-
-- Feel free to add functionality (not mandatory)
-- Use redux/context for state management
-- Well explained readme (screenshot etc)
 
 ---
