@@ -1,0 +1,105 @@
+.Login{
+    background-color: #e4edf7;
+    height: 110vh;
+}
+
+.Container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.Form{
+    background-color: white;
+    width: 70vh;
+    height: 50vh;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    box-shadow:
+    4.5px 4.5px 3.6px rgba(0, 0, 0, 0.017),
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.025),
+    30.1px 30.1px 24.1px rgba(0, 0, 0, 0.033),
+    100px 100px 80px rgba(0, 0, 0, 0.05)
+  ;
+  
+}
+
+.Login-form{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin: 3vh;
+    width: 100%;
+
+}
+
+.Login-form-title{
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.5rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.Login-form-text{
+    border-radius: 20px;
+    border-style: none;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background-color: #e4edf7;
+    color: black;
+    height: 2rem;
+    width: 25rem;
+    
+}
+
+.Login-form-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.Login-form-button{
+    background-color: #1c72e7;
+    color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    height: 2.5rem;
+    
+}
+
+
+.Login-form-button:hover{
+    background-color: white;
+    color: #1c72e7;
+    border: #1c72e7 solid 1px;
+    cursor: pointer;
+}
+
+.Login-form-account{
+    color: #1c72e7
+}
+
+.Login-form-account:hover{
+    cursor: pointer;
+}
+
+.Login-final{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 25rem;
+    margin: 1rem;
+}
+
+.Login-text{
+    margin: 0.5rem;
+}

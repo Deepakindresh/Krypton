@@ -14,7 +14,6 @@ import Login from './routes/login/Login';
 import Products from './routes/product/productpages/Products';
 import Cart from './routes/product/productpages/Cart';
 
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -23,9 +22,9 @@ root.render(
       <Routes>
         
         <Route path="/" element={
-        <App />
+        <Login />
         } />
-        <Route path="/login" element={<Login />} />
+        <Route path="/home" element={<App />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/products" element={<Products />} />
       </Routes>

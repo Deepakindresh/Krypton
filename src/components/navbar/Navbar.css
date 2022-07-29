@@ -30,7 +30,8 @@
 .Links{
     display: flex;
     justify-content: space-between;
-    width: 10%;
+    margin-right: 10px;
+    width: 13%;
 }
 
 .Links:hover{

@@ -2,25 +2,28 @@ import React from 'react'
 import "./Navbar.css"
 import { Link } from 'react-router-dom';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import {useStateValue} from '../../StateProvider';
+
 
 function Navbar() {
+    const [{user}, dispatch] = useStateValue();
   return (
     <div className='Header'>
-        <Link to='/' className='Link'>
+        <Link to='/home' className='Link'>
             <div className='Logo' >
                 ShopKart.
             </div>
         </Link>
 
         <div className='Links'>
-            <Link to='/products' className='Link'>
+            <Link to='/home' className='Link'>
                 <div className='Links'>
                     Products
                 </div>
             </Link>
             <Link to='/login' className='Link'>
                 <div className='Links'>
-                    Login
+                    {user ? 'Logout' : 'Login'}
                 </div>
             </Link>
             <Link to='/cart' className='Link'>

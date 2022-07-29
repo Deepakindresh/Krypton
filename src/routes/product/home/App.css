@@ -1,8 +1,14 @@
-*{
+.Home{
+    background-color: #e4edf7;
+    height: 100%;
     margin: 0;
 }
 
-.Home{
-    background-color: #e4edf7;
-    
+.Home-products{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: center;
+    margin-top: 10px;
 }
+

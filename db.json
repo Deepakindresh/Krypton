@@ -1,5 +1,16 @@
 {
-  "users": [],
+  "users": [
+    {
+      "email": "deepakindreshn@gmail.com",
+      "password": "$2a$10$LfvM62wfaSVD1D8B14bbVOwISFTaoKR28HXP7JxcES4VCPNjzyX92",
+      "id": 1
+    },
+    {
+      "email": "kaushikn@gmail.com",
+      "password": "$2a$10$kH58ybYSADmP66/4fKTarurq5lZ/8HyKX8OTwfqdkxLO66.Lc1vXq",
+      "id": 2
+    }
+  ],
   "products": [
     {
       "id": 1,
