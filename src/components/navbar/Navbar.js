@@ -6,7 +6,8 @@ import {useStateValue} from '../../StateProvider';
 
 
 function Navbar() {
-    const [{user}, dispatch] = useStateValue();
+    const [{user,basket}, dispatch] = useStateValue();
+    
   return (
     <div className='Header'>
         <Link to='/home' className='Link'>
@@ -21,7 +22,7 @@ function Navbar() {
                     Products
                 </div>
             </Link>
-            <Link to='/login' className='Link'>
+            <Link to='/' className='Link'>
                 <div className='Links'>
                     {user ? 'Logout' : 'Login'}
                 </div>
@@ -29,6 +30,7 @@ function Navbar() {
             <Link to='/cart' className='Link'>
                 <div className='Links'>
                     <ShoppingCartIcon />
+                    <div style={{backgroundColor:'red', borderRadius: '20px', padding: '5px'}}>{basket.length}</div>
                 </div>
             </Link>
         </div>

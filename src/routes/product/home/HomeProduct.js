@@ -1,13 +1,16 @@
-import React from 'react'
+import React, {useState} from 'react'
 import "./HomeProduct.css"
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import {useStateValue} from '../../../StateProvider';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 
 function HomeProduct({product}) {
     const [{currProduct}, dispatch] = useStateValue();
+    const [addedtocart, setAddedtocart] = useState([]);
+    
     let navigate = useNavigate();
   function handleDispatch() {
     dispatch({
@@ -16,9 +19,38 @@ function HomeProduct({product}) {
     });
     navigate('/products');
   }
+
+  function handleBasket(){
+    for(let i = 0; i < addedtocart.length; i++){
+      if (addedtocart[i].id === product.id){
+        return;
+      }
+    }
+    dispatch({
+      type: "ADD_TO_BASKET",
+      item: product
+    });
+    setAddedtocart([...addedtocart, product]);
+  }
+
+  function handleFav(){
+    axios.post('http://localhost:5000/favourites', {
+      product: product
+    }).then((response) => {
+      console.log(response);
+    }).catch((error) => {
+      console.log(error);
+    }).finally(() => {
+      console.log("This is products ",product);
+    }
+    );
+  }
+
   return (
     <div className='Home-product' >
             <img className='Product-image' src={product.image} alt={product.name} onClick={handleDispatch}/>
+            <div className='Home-product-content'>
+
             <div className='Home-product-info' >
                 <div className='Product-content' onClick={handleDispatch}>
                     <div className='Product-title'>{product.title}</div>
@@ -26,9 +58,10 @@ function HomeProduct({product}) {
                     <div className='Product-rating'>{product.rating}</div>
                 </div>
               <div className='Product-icons'>
-                <FavoriteIcon className='Product-favourite'/>
-                <AddShoppingCartIcon className='Product-cart'/>
+                <FavoriteIcon className='Product-favourite' onClick={handleFav}/>
+                <AddShoppingCartIcon className='Product-cart' onClick={handleBasket}/>
               </div>
+            </div>
             </div>
     </div>
   )

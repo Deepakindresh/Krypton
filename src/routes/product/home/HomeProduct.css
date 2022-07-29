@@ -32,6 +32,11 @@
     justify-content: space-between;
 }
 
+.Home-product-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 .Product-title{
     margin-bottom: 1px;
@@ -44,11 +49,11 @@
 }
 
 .Product-amount{
-    margin: 2px;
+    margin: 3px;
 }
 
 .Product-rating{
-    margin: 2px;
+    margin: 3px;
     background-color: green;
     width: fit-content;
     padding: 4px;

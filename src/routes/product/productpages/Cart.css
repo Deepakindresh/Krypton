@@ -1,0 +1,100 @@
+.Cart{
+    background-color: #e4edf7;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+.Cart-Container{
+    display: flex;
+    flex-direction: column;
+}
+
+.Card1{
+    height: 24rem;
+    width: 48rem;
+    background-color: white;
+    margin: 2rem;
+    border-radius: 5px;
+    box-shadow:
+    4.5px 4.5px 3.6px rgba(0, 0, 0, 0.017),
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.025),
+    30.1px 30.1px 24.1px rgba(0, 0, 0, 0.033),
+    100px 100px 80px rgba(0, 0, 0, 0.05);
+    z-index: 1;
+    overflow: scroll;
+}
+
+.Card2{
+    height: 10rem;
+    width: 36rem;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    margin: 2rem;
+    border-radius: 5px;
+    box-shadow:
+    4.5px 4.5px 3.6px rgba(0, 0, 0, 0.017),
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.025),
+    30.1px 30.1px 24.1px rgba(0, 0, 0, 0.033),
+    100px 100px 80px rgba(0, 0, 0, 0.05);
+    z-index: 1;
+}
+
+
+
+.CardContent{
+    margin: 15px;
+    color: gray;
+    width: 80%;
+}
+
+.CardPayment{
+    height: 20rem;
+    width: 20rem;
+    background-color: white;
+    margin: 2rem;
+    border-radius: 5px;
+    box-shadow:
+    4.5px 4.5px 3.6px rgba(0, 0, 0, 0.017),
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.025),
+    30.1px 30.1px 24.1px rgba(0, 0, 0, 0.033),
+    100px 100px 80px rgba(0, 0, 0, 0.05);
+    z-index: 1;
+}
+
+.CardPayment-content{
+    color: #404244;
+    padding: 1rem;
+}
+
+.CardPayment-price{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+.CloseIcon{
+    color: red;
+}
+
+.CardPayment-button{
+    background-color: #1c72e7;
+    color: white;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 1rem;
+    margin-left: 2rem;
+}
+
+.CardPayment-button:hover{
+    cursor: pointer;
+}
+
+.Popup{
+    position : fixed;
+    height: 400px;
+    width: 400px;
+    left: 35%;
+    bottom: 25%;
+}
