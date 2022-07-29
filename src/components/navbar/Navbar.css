@@ -1,0 +1,38 @@
+.Header{
+    background-color: #0474EC;
+    height: 4rem;
+    color: white;
+    
+    display: flex;
+    z-index: 5;
+    margin: 0px;
+    min-block-size: 40px;
+    top: 0;
+    position: sticky;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.Logo{
+    height: 3rem;
+    font-size: 250%;
+    font-weight: 600;
+    
+    text-decoration: none;
+}
+
+.Link{
+    color: white;
+    text-decoration: inherit;
+}
+
+.Links{
+    display: flex;
+    justify-content: space-between;
+    width: 10%;
+}
+
+.Links:hover{
+    color:black
+}
